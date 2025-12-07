@@ -1,0 +1,49 @@
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-sans: 'Inter', 'Vazirmatn', system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #020617; /* slate-950 */
+  color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* RTL Support for mixed content */
+[dir="rtl"] {
+  font-family: 'Vazirmatn', 'Inter', system-ui, sans-serif;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
